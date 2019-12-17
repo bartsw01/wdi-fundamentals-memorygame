@@ -7,6 +7,7 @@ var cards = [
 
 var cardsInPlay = [];
 
+
 function checkForMatch(){
 	
 	if (cardsInPlay.length === 2) {
@@ -20,6 +21,7 @@ function checkForMatch(){
 
 function flipCard() {
 	var cardId = this.getAttribute('data-id');
+	this.setAttribute('src', cards[cardId].cardImage)
 	console.log(cardId);
 	console.log("User flipped " + cards[cardId].rank);
 	console.log("User flipped " + cards[cardId].suit);
